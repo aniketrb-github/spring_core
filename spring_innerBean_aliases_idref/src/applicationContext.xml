@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	
+	<!-- Inner Beans usage. (SCOPE MANAGEMNET)
+	Scenario: Business Requirement is to keep the comminPoint class attribute external & accessible to other beans(public)
+	while, pointB & pointC need to kept internal & limited(private) to the triangle bean
+	 -->
+	
+	<!-- Triangle Entity -->
+	<bean id="triangle" class="org.aniket.javabrains.entities.Triangle">
+	
+		<!-- Outer Bean : can be used by other objects as well -->
+		<property name="commonPoint" ref="commonPt"/>
+	
+		<!-- Inner Beans : beans which are inner & limited to Triangle bean only 
+		we dont give it 'id' since its internally used & wont be reffered by outside beans
+		-->
+		<property name="point_B">
+			<bean class="org.aniket.javabrains.entities.Point">
+				<constructor-arg value="22"/>
+				<constructor-arg value="222"/>		
+			</bean>
+		</property>
+		
+		<property name="point_C">
+			<bean class="org.aniket.javabrains.entities.Point">
+				<constructor-arg value="33"/>
+				<constructor-arg value="333"/>		
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- Point Entity | commonPoint - public Bean - externalBean-->
+	<bean id="commonPt" class="org.aniket.javabrains.entities.Point">
+		<constructor-arg value="11"/>
+		<constructor-arg value="111"/>		
+	</bean>	
+	
+</beans>
