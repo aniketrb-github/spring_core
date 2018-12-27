@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- Triangle: Requesting Entity -->
+	
+	<bean id="triangle" class="com.synechron.ingram.vts.entities.Triangle">
+		<property name="point_A" ref="point_a"/>
+		<property name="point_B" ref="point_b"/>
+		<property name="point_C" ref="point_c"/>
+	</bean>
+	
+	<!-- Point: Dependent Entity -->
+	
+	<bean id="point_a" class="com.synechron.ingram.vts.entities.Point">
+		<property name="x_coordinate" value="5"/>
+		<property name="y_coordinate" value="5"/>	
+	</bean>
+	
+	<bean id="point_b" class="com.synechron.ingram.vts.entities.Point">
+		<property name="x_coordinate" value="10"/>
+		<property name="y_coordinate" value="10"/>
+	</bean>
+	
+	<bean id="point_c" class="com.synechron.ingram.vts.entities.Point">
+		<property name="x_coordinate" value="15"/>
+		<property name="y_coordinate" value="15"/>
+	</bean>
+	
+	
+	<!-- 
+	5, 5
+	15, 15
+	25, 25
+	 -->
+	
+</beans>
