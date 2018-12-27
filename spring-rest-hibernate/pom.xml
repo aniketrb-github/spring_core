@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
-		<spring.version>4.3.6.RELEASE</spring.version>
+		<spring.version>4.3.18</spring.version>
 		<hibernate.version>5.0.5.Final</hibernate.version>
 		<mysql.version>5.1.31</mysql.version>
 		<joda-time.version>2.3</joda-time.version>
