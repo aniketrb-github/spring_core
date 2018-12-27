@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- 
+	This  acts as the bluePrint/meta-data for the Spring Container
+	'id' acts as the reference to this class
+	there can be multiple beans here with their distinct tags & id's
+	 -->
+	<bean id="triangle" class="org.aniket.javabrains.Triangle">
+		
+		
+		<!-- Spring using Setter Injection, will inject the value Scalene into the field attribute "type" of class Triangle 
+		<property name="type" value="Scalene"/> 
+		-->
+		
+<!-- Constructor Injection searches for perfect match in respective POJO based on number of arguments in ctors arg-List 
+Below are 2 ctor args, therefore it searches for a Ctor having 2 args in its param list & sets these values respectively
+-->
+		<constructor-arg value="Equilateral"/> 
+		<constructor-arg value="40"/>
+		
+		<!-- Few more types of Ctor Injection
+		 
+		 Here you have specified the data type to be more specific in finding the Ctor
+		<constructor-arg type="java.lang.String" value="Equilateral"/> 
+		<constructor-arg type="int" value="40"/>
+		
+		Here you have specified the index i.e the arg. arrangement order 
+		<constructor-arg index="0" value="Equilateral"/> 
+		<constructor-arg index="1" value="40"/>
+		 -->
+	</bean>
+</beans>
