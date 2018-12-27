@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	
+	<!-- Type 1 : Constructor Injection (plain usage) | Rectangle -->
+	
+	<bean id="rectangle" class="org.javabrains.aniket.entities.Rectangle">
+		<constructor-arg value="121"/>
+		<constructor-arg value="133"/>
+		<constructor-arg value="Lockheed Martin's"/>
+	</bean>
+
+	<!-- Type 2 : Ctor Injection (with "type" attribute usage) | Circle-->
+	
+	<bean id="circle" class="org.javabrains.aniket.entities.Circle">
+		<constructor-arg type="int" value="12413"/>
+		<constructor-arg type="java.lang.String" value="Earths Moon's"/>
+	</bean>
+	
+	<!-- Type 3 : Ctor Injection (with "index" attribute usage) | Polygon-->
+	
+	<bean id="polygon" class="org.javabrains.aniket.entities.Polygon">
+		<constructor-arg index="0" value="112"/>
+		<constructor-arg index="1" value="344"/>
+		<constructor-arg index="2" value="545"/>
+		<constructor-arg index="3" value="213"/>
+	</bean>
+	
+</beans>
