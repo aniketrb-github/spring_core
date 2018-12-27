@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   <bean id="helloWorld" class="org.javabrains.entity.HelloWorld">
+   		<property name="message1" value="Hello World Message 1"/>
+   		<property name="message2" value="Hello World Message 2"/>
+   </bean>
+   
+   <!-- Spring Inheritance in XML app-cofig.xml is at Instance Level & not at Class Level lik in core Java 
+   -->
+   <bean id="helloIndia" class="org.javabrains.entity.HelloIndia" parent="helloWorld">
+   		<property name="message1" value="Hello India Msg 1"/>
+   		<property name="message3" value="Hello India Msg 3"/>
+   </bean>
+   
+   </beans>
