@@ -1,1 +1,0 @@
-Spring REST Hibernate Web services tutoril
