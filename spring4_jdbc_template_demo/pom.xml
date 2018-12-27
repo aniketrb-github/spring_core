@@ -8,7 +8,7 @@
 	<name>spring4_jdbc_template_demo</name>
 
 	<properties>
-		<springframework.version>4.0.18</springframework.version>
+		<springframework.version>4.3.18</springframework.version>
 	</properties>
 
 	<dependencies>
